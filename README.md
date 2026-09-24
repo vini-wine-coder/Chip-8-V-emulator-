@@ -72,52 +72,6 @@ make clean
 └── README.md
 ```
 
-## Próximas etapas
-
-A evolução planejada está dividida em etapas para manter o desenvolvimento incremental:
-
-### 1. Organizar a base do projeto
-
-- Remover binários e arquivos gerados do controle de versão.
-- Adicionar um `.gitignore` apropriado para C++.
-- Corrigir o carregamento de ROMs e tratar falhas de abertura, tamanho inválido e leitura incompleta.
-- Permitir informar o caminho da ROM pela linha de comando.
-- Separar melhor o estado da máquina, a execução e a interface externa.
-
-### 2. Implementar o núcleo do CHIP-8
-
-- Inicializar corretamente memória, registradores, pilha, `PC` e `I`.
-- Carregar o conjunto de fontes hexadecimal na memória reservada.
-- Implementar o ciclo completo de busca, decodificação e execução.
-- Implementar os 35 opcodes originais do CHIP-8.
-- Garantir o comportamento correto do registrador `VF` e dos saltos/chamadas.
-- Adicionar proteção contra acesso fora dos limites.
-
-### 3. Adicionar vídeo, entrada e temporizadores
-
-- Criar o framebuffer de 64×32 pixels.
-- Implementar as instruções de desenho, incluindo XOR e detecção de colisão.
-- Integrar uma biblioteca de janela, como SDL2, para renderização.
-- Mapear o teclado do computador para o teclado hexadecimal do CHIP-8.
-- Implementar os temporizadores de delay e sound a 60 Hz.
-- Adicionar saída de áudio para o sound timer.
-
-### 4. Testar e validar
-
-- Criar testes unitários para memória, registradores, pilha e opcodes.
-- Usar ROMs de teste conhecidas para validar a execução.
-- Testar carregamento de ROMs pequenas e inválidas.
-- Verificar diferentes configurações de velocidade e comportamento de teclado.
-- Documentar decisões de compatibilidade, especialmente para variantes como SCHIP, se forem adicionadas.
-
-### 5. Melhorar a experiência de uso
-
-- Criar uma interface de linha de comando clara.
-- Exibir mensagens de erro úteis.
-- Adicionar opções de debug, pausa, passo a passo e visualização de registradores.
-- Documentar instalação, dependências e controles.
-- Configurar integração contínua para compilação e testes automáticos.
-
 ## Metas do projeto
 
 As metas abaixo servem como um roteiro padrão de desenvolvimento:
